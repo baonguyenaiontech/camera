@@ -1,0 +1,24 @@
+{
+    "name": "nnbao/camera",
+    "description": "A service to manage camera actions",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Bao",
+            "email": "nnbao200196@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "camera\\": "src/"
+        }
+    },
+    "require": {},
+    "extra": {
+        "laravel": {
+            "providers": [
+                "camera\\CameraServiceProvider"
+            ]
+        }
+    }
+}
