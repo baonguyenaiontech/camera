@@ -7,6 +7,10 @@ use camera\Services\CameraService\IPCamera;
 class CameraServiceProvider extends ServiceProvider{
     public function register()
     {
+        foreach(glob(__DIR__.'/../helpers/*.php') as $filename){
+            require_once $filename;
+        }
+
         $configs = split_files_with_basename($this->app['files']->glob(__DIR__.'/../config/*.php'));
         foreach($configs as $key => $row){
             $this->mergeConfigFrom($row, $key);
